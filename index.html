@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гидрант</title>
+
+  <link rel="icon" type="image/png" href="icon.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #0b0d12;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* ===== АНИМАЦИЯ ПОЯВЛЕНИЯ ===== */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade {
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+
+    /* ===== СТИЛИ ===== */
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #1f2430;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .username {
+      margin-top: 6px;
+      font-size: 16px;
+      color: #9aa0a6;
+    }
+
+    .about {
+      margin-top: 24px;
+      padding: 18px;
+      background: #141821;
+      border-radius: 14px;
+      font-size: 14px;
+      color: #d1d5db;
+      line-height: 1.6;
+      border: 1px solid #1f2430;
+      text-align: left;
+    }
+
+    .about b {
+      color: #ffffff;
+    }
+
+    .buttons {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 16px;
+      border-radius: 16px;
+      background: #161a22;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 500;
+      border: 1px solid #242a36;
+      transition: transform 0.12s ease, background 0.12s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+      background: #1d2230;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Аватар -->
+    <img src="avatar.jpg" alt="Avatar" class="avatar fade delay-1">
+
+    <!-- Имя -->
+    <h1 class="fade delay-2">Гидрант</h1>
+    <div class="username fade delay-2">@qufxp</div>
+
+    <!-- About me -->
+    <div class="about fade delay-3">
+      <b>About me</b><br><br>
+      Более 6 лет в Telegram. Ранее активно работал в Discord.<br>
+      Имею опыт в сфере NFT.<br>
+      В данный момент изучаю программирование и развиваюсь в IT.
+    </div>
+
+    <!-- Кнопки -->
+    <div class="buttons fade delay-4">
+      <a class="btn" href="https://t.me/qufxp" target="_blank">
+        My Telegram
+      </a>
+
+      <a class="btn" href="https://t.me/qufxpforever" target="_blank">
+        My channel
+      </a>
+
+      <a class="btn" href="https://t.me/ignorantchat" target="_blank">
+        My chat
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>
