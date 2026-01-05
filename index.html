@@ -42,7 +42,45 @@
       50%  { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+/* ===== ПЛАВАЮЩИЕ УЗОРЫ ===== */
+.background-shapes {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+}
 
+.shape {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(138,43,226,0.45), transparent 70%);
+  filter: blur(60px);
+  animation: float 20s ease-in-out infinite;
+}
+
+.shape:nth-child(1) {
+  top: 10%;
+  left: -10%;
+}
+
+.shape:nth-child(2) {
+  top: 50%;
+  right: -15%;
+  animation-delay: -7s;
+}
+
+.shape:nth-child(3) {
+  bottom: -10%;
+  left: 30%;
+  animation-delay: -14s;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(40px, -60px); }
+  100% { transform: translate(0, 0); }
+}
     .container {
       width: 100%;
       max-width: 420px;
@@ -138,7 +176,11 @@
   </style>
 </head>
 <body>
-
+<div class="background-shapes">
+  <div class="shape"></div>
+  <div class="shape"></div>
+  <div class="shape"></div>
+</div>
   <div class="container">
 
     <img src="avatar.png" alt="Avatar" class="avatar fade delay-1">
